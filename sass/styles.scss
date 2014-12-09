@@ -1,0 +1,113 @@
+@import url(http://fonts.googleapis.com/css?family=Open+Sans:400,700);
+
+$brand-primary: #ff9317;
+$brand-secondary: #f6f6f6;
+$menu-list-icon: "\0BB \020";
+$border-radius-base: 0;
+
+@import "bootstrap-compass";
+@import "bootstrap-variables";
+@import "bootstrap";
+
+$marginPadding: 20px;
+
+body {
+  font-family: 'Open Sans', sans-serif;
+
+  p {
+    line-height: 1.6em;
+  }
+}
+
+header {
+  .branding {
+    background: $brand-primary;
+
+    .heading {
+      font-weight: 700;
+      margin: $marginPadding;
+    }
+
+    .subtitle {
+      font-size: 1.3em;
+      margin: $marginPadding;
+    }
+  }
+
+  nav {
+    background: $brand-secondary;
+    padding: 0 !important;
+
+    ul {
+      margin: 0;
+      padding: 0;
+
+      li {
+        display: inline-block;
+        font-weight: bold;
+        background: $brand-secondary;
+        padding: $marginPadding;
+        margin: 0;
+      }
+      
+      li:before {
+        content: $menu-list-icon;
+        vertical-align: text-bottom;
+      }
+
+      li:hover {
+        background: darken($brand-secondary, 3%);
+      }
+
+      li.active {
+        background: darken($brand-secondary, 3%);
+      }
+    }
+  }
+}
+
+.content {
+  border-left: 1px solid $brand-secondary;
+  border-right: 1px solid $brand-secondary;
+  padding: $marginPadding 0 $marginPadding 0;
+
+  .homepage-contact-form {
+    textarea {
+      min-height: 250px;
+    }
+  }
+}
+
+footer {
+  padding: 20px;
+  background: $brand-secondary;
+  color: $brand-primary;
+
+  p {
+    margin: 0;
+  }
+}
+
+/* Medium devices (desktops, 992px and down) */
+@media (max-width: 992px) {
+  .branding {
+    margin: 0;
+    padding: $marginPadding;
+  }
+
+  nav {
+    ul {
+      margin: 0;
+    }
+
+    li {
+      display: block;
+      width: 100%;
+    }
+  }
+}
+
+.panel-heading {
+  padding: $marginPadding;
+  background: $brand-secondary !important;
+}

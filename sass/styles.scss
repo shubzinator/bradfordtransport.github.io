@@ -4,6 +4,7 @@ $brand-primary: #ff9317;
 $brand-secondary: #f6f6f6;
 $menu-list-icon: "\0BB \020";
 $border-radius-base: 0;
+$paragraph-line-height: 1.6em;
 
 @import "bootstrap-compass";
 @import "bootstrap-variables";
@@ -15,7 +16,7 @@ body {
   font-family: 'Open Sans', sans-serif;
 
   p {
-    line-height: 1.6em;
+    line-height: $paragraph-line-height;
   }
 }
 
@@ -67,6 +68,27 @@ header {
       }
     }
   }
+}
+
+$contact-icons-size: 25px;
+
+.contact-email, .contact-phone {
+
+}
+
+.contact-email {
+  background: url("../images/email.svg") 25px 17px no-repeat;
+  width: 25px;
+  height: 17px;
+  display: inline-block;
+}
+
+.contact-phone {
+  background: url("../images/phone.svg") 25px 17px no-repeat;
+  width: 19px;
+  height: 25px;
+  display: inline-block;
+  margin: 0 3px 0 3px;
 }
 
 .content {

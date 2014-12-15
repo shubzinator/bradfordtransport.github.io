@@ -42,12 +42,15 @@ header {
       margin: 0;
       padding: 0;
 
+      a:hover {
+        text-decoration: none !important;
+      }
+
       li {
         display: inline-block;
         font-weight: bold;
         background: $brand-secondary;
         padding: $marginPadding;
-        margin: 0;
       }
       
       li:before {
